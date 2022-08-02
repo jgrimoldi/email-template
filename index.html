@@ -1,0 +1,226 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Sistemas - Recuperación de contraseña</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #292929;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #292929;
+            padding-bottom: 60px;
+        }
+
+        .main {
+            background-color: #FFF;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 800px;
+            border-spacing: 0;
+
+            font-family: 'Roboto', sans-serif;
+            color: #121212;
+        }
+
+        .header {
+            width: 100px;
+            max-width: 100%;
+            height: 150px;
+            border-bottom: 1px solid #999;
+        }
+
+        .header__img {
+            height: 100%;
+            object-fit: contain;
+
+            border-bottom: 1px solid #00BCE3;
+        }
+
+        .mailto {
+            color: #121212;
+        }
+
+        .button {
+            background-color: #121212;
+            color: #FFF;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .button:hover {
+            background-color: #FFF;
+            border: 1px solid #121212;
+            color: #121212;
+            text-decoration: none;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #121212;
+
+
+            font-size: 20px;
+            line-height: 50px;
+            padding: 15px 15px;
+            margin: 10px 15px;
+            color: #FFF;
+        }
+
+        .social-link:hover {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .logo__footer {
+            display: block;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <center class="wrapper">
+        <table class="main" width="100%">
+
+            <!-- top -->
+            <tr>
+                <td height="8" style="background-color: #000"></td>
+            </tr>
+            <!-- top -->
+
+            <!-- header     -->
+            <tr>
+                <td style="text-align: center; padding: 0 20px ;" class="header">
+                    <a href="https://agsistemas.net.ar/"><img src="https://i.ibb.co/DwryR53/logo.webp" alt="Estudiante en computadora" width="120"
+                            class="header__img"></a>
+                </td>
+            </tr>
+            <!-- header     -->
+
+            <!-- main -->
+            <tr>
+                <td style="padding: 15px 0 45px;">
+
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center; padding: 15px;">
+                                <p style="font-size: 18px; font-weight: 500;">Hola <%= name %>, hemos recibido una
+                                        solicitud para cambiar la contraseña de su sistema.</p>
+
+                                <p
+                                    style="text-align: justify; line-height: 23px; font-size: 15px; padding: 5px 0 15px;">
+                                    Alguien (esperemos
+                                    que tú) nos ha solicitado restablecer la contraseña de tu cuenta.
+                                    Haz clic en el
+                                    siguiente botón, en el intervalo de una hora, para hacerlo. Si no solicitaste
+                                    restablecer la
+                                    contraseña, puede ignorar este mensaje. No responda a este mail, fue enviado desde
+                                    una dirección de
+                                    correo no gestionada. Si tiene alguna consulta, por favor contacte con nuestro
+                                    <a class="mailto" href="mailto:info@agsistemas.net.ar">Soporte Técnico</a>.
+                                </p>
+
+                                <a href="<%= url %>" target="_blank" rel="noopener noreferrer" class="button">Restablece
+                                    tu
+                                    contraseña</a>
+
+                                <p style="line-height:18px; font-size: 13px; padding: 15px 0 0; color: #999;">O haz
+                                    clic en este enlace: <a style="color: #999;" href="<%= url %>" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <%= url %>
+                                    </a></p>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <!-- main -->
+
+            <!-- footer -->
+            <tr>
+                <td style="background-color: #000;">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center; padding: 45px 20px; color: #FFF">
+
+                                <a class="logo__footer" href="https://agsistemas.net.ar/" target="_blank"
+                                    rel="noopener noreferrer"><img src="https://i.ibb.co/vctXYd8/logo-blanco.webp" alt="AG Sistemas logo blanco"
+                                        width="90" height="67.5"></a>
+
+                                <a class="social-link fa-brands fa-facebook-f" aria-label="facebook"
+                                    href="https://www.facebook.com/agsistemas1/" target="_blank"
+                                    rel="noopener noreferrer"></a>
+                                <a class="social-link fa-brands fa-telegram" aria-label="telegram"
+                                    href="https://t.me/Ag_alnet" target="_blank" rel="noopener noreferrer"></a>
+                                <a class="social-link fa-brands fa-linkedin-in" aria-label="linkedin"
+                                    href="https://www.linkedin.com/in/alexis-giammarino/" target="_blank"
+                                    rel="noopener noreferrer"></a>
+
+                                <p style="padding: 5px;"><i class="fa-regular fa-copyright"></i> AG Sistemas. Todos los
+                                    derechos reservados</p>
+                                <p style="padding: 0;">Direcion 123 - ARG</p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- footer -->
+
+        </table>
+    </center>
+
+    <script src="https://kit.fontawesome.com/65e563f321.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
