@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AG Sistemas - Recuperación de contraseña</title>
+    <title><%= title %></title>
 
     <style type="text/css">
         * {margin: 0;padding: 0;box-sizing: border-box;}
@@ -37,7 +37,7 @@
 
             <tr>
                 <td style="text-align: center; padding: 0 20px ;" class="header">
-                    <a href="https://agsistemas.net.ar/"><img src="https://i.ibb.co/qWKg75X/logo.png" alt="Estudiante en computadora" width="120" ></a>
+                    <a href="https://agsistemas.net.ar/"><img src="https://i.ibb.co/qWKg75X/logo.png" alt="AG Sistemas logo blanco" width="120" ></a>
                 </td>
             </tr>
     
@@ -45,31 +45,31 @@
                 <td style="padding: 15px 0 45px;">
 
                     <table width="100%">
+
                         <tr>
                             <td style="text-align: center; padding: 15px;">
-                                <p style="font-size: 18px; font-weight: 500;">Hola <%= name %>, hemos recibido una
-                                        solicitud para cambiar la contraseña de su sistema.</p>
+                                <p style="font-size: 18px; font-weight: 500;"><%= subtitle %></p>
 
-                                <p style="text-align: justify; line-height: 23px; font-size: 15px; padding: 5px 0 20px;">
-                                    Alguien (esperemos
-                                    que tú) nos ha solicitado restablecer la contraseña de tu cuenta.
-                                    Haz clic en el
-                                    siguiente botón, en el intervalo de una hora, para hacerlo. Si no solicitó
-                                    restablecer la
-                                    contraseña, puede ignorar este mensaje. No responda a este mail, fue enviado desde
+                                <p style="text-align: justify; line-height: 23px; font-size: 15px; padding: 5px 0 15px;">
+                                    Para validar su cuenta,
+                                    haz clic en el
+                                    siguiente botón, en el intervalo de 24 horas, para hacerlo. Si no solicitaste
+                                    el registro en nuestro 
+                                    sistema, puede ignorar este mensaje. No responda a este mail, fue enviado desde
                                     una dirección de
-                                    correo no gestionada. Si tiene alguna consulta, por favor contáctese con nuestro [info@agsistemas.net.ar]
+                                    correo no gestionada. Si tiene alguna consulta, por favor contacte con nuestro
                                     <a style="color: #121212;" class="mailto" href="mailto:info@agsistemas.net.ar">Soporte Técnico</a>.
                                 </p>
 
-                                <a class="button" style="color: #FFF;" href="<%= url %>" target="_blank" rel="noopener noreferrer">Restablece tu contraseña</a>
-   
-                                <p style="line-height:18px; font-size: 13px; padding: 25px 100px 0; color: #999;">O haz
+                                <a href="<%= url %>" target="_blank" rel="noopener noreferrer" class="button"><%= button_text %></a>
+
+                                <p style="line-height:18px; font-size: 13px; padding: 15px 0 0; color: #999;">O haz
                                     clic en este enlace: <a style="color: #999;" href="<%= url %>" target="_blank"
                                         rel="noopener noreferrer">
-                                        http://stock.agsistemas.net.ar:3000/i/reset/75e45bda3d6f4bf8b9f9bb66ceadfccf395da766
+                                        <%= url %>
                                     </a></p>
                             </td>
+
                         </tr>
                     </table>
 
@@ -97,7 +97,8 @@
                                 </a>
 
                                 <p style="padding: 10px;"><i class="fa-regular fa-copyright"></i> AG Sistemas. Todos los derechos reservados</p>
-                                <p style="padding: 0;">Direcion 123 - ARG</p>
+                                <!-- <p style="padding: 0;">Direcion 123 - ARG</p> -->
+
 
                             </td>
                         </tr>
